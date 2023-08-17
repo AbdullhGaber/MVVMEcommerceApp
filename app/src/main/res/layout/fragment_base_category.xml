@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/base_category_nested_scroll_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/rv_offer"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           android:layout_marginStart="10dp"
+           android:layout_marginTop="10dp"
+           />
+       <ProgressBar
+           android:id="@+id/offer_products_progressbar"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:visibility="gone"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/rv_offer"
+           android:indeterminateTint="@color/g_gray700"
+           />
+
+       <TextView
+           android:id="@+id/best_products_tv"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Best products"
+           android:textStyle="bold"
+           android:fontFamily="@font/poppins_thin"
+           app:layout_constraintStart_toStartOf="@id/rv_offer"
+           app:layout_constraintTop_toBottomOf="@id/rv_offer"
+           android:textSize="22sp"
+           android:layout_marginTop="20dp"
+           android:textColor="@color/g_black"
+           />
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/best_products_rv"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           app:layout_constraintStart_toStartOf="@id/rv_offer"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/best_products_tv"
+           android:overScrollMode="never"
+           />
+
+
+       <ProgressBar
+           android:id="@+id/best_products_progressbar"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:visibility="gone"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/best_products_rv"
+           android:indeterminateTint="@color/g_gray700"
+           />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

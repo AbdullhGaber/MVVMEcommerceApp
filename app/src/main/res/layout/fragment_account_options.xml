@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/blury_background"
+        android:scaleType="centerCrop"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/app_name_tv"
+            android:layout_marginTop="120dp"
+            style="@style/h3"
+            android:drawableStart="@drawable/ic_kleine_shape"
+            android:drawablePadding="6dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:text="Ecom"
+            />
+
+        <TextView
+            android:id="@+id/lets_login_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/h4"
+            android:layout_marginTop="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_name_tv"
+            android:text="@string/rightAddress"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="35sp"
+            />
+
+        <TextView
+            android:id="@+id/register_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/h2"
+            app:layout_constraintStart_toStartOf="@id/lets_login_tv"
+            app:layout_constraintEnd_toEndOf="@id/lets_login_tv"
+            app:layout_constraintTop_toBottomOf="@id/lets_login_tv"
+            android:text="@string/quality_tv"
+            android:layout_marginTop="15dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_account_register"
+            android:layout_width="@dimen/medium_button_width"
+            android:layout_height="@dimen/medium_button_height"
+            style="@style/blueButtonStyle"
+            app:layout_constraintTop_toBottomOf="@id/register_tv"
+            app:layout_constraintStart_toStartOf="@id/register_tv"
+            app:layout_constraintEnd_toEndOf="@id/register_tv"
+            android:text="Register"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_account_login"
+            android:layout_width="@dimen/medium_button_width"
+            android:layout_height="@dimen/medium_button_height"
+            style="@style/whiteButtonStyle"
+            app:layout_constraintTop_toBottomOf="@id/btn_account_register"
+            app:layout_constraintStart_toStartOf="@id/register_tv"
+            app:layout_constraintEnd_toEndOf="@id/register_tv"
+            android:text="Login"
+            android:layout_marginTop="5dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
